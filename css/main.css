@@ -1,0 +1,892 @@
+@charset "utf-8";
+
+/*메인 페이지 CSS - main.css */
+
+/*파일머징(합치기)*/
+@import url(reset.css);
+@import url(core.css);
+@import url(media.css);
+
+
+@font-face {
+
+    font-family: monr;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
+        url('../fonts/montserrat/Montserrat-Regular.woff') format('woff');
+
+}
+
+@font-face {
+
+    font-family: mont;
+    src: url('../fonts/montserrat/Montserrat-Thin.ttf') format('truetype'),
+        url('../fonts/montserrat/Montserrat-Thin.woff') format('woff');
+
+}
+
+@font-face {
+
+    font-family: gongb;
+    src: url('../fonts/gong/Gong_B.ttf') format('truetype'),
+        url('../fonts/gong/Gong_B.woff') format('woff');
+
+}
+
+@font-face {
+
+    font-family: gongl;
+    src: url('../fonts/gong/Gong_L.ttf') format('truetype'),
+        url('../fonts/gong/Gong_L.woff') format('woff');
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+
+/*탑버튼셋팅***********/
+.tbtn {
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
+    border: 1px solid #333;
+    width: 2.5vw;
+    height: 2.5vw;
+    line-height: 2.5vw;
+    border-radius: 50%;
+    text-align: center;
+    animation: tbtnAni 1.5s ease-in infinite;
+    display: none;
+
+}
+
+@keyframes tbtnAni {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+}
+
+
+
+
+/*마우스효과********************/
+.cursor-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    cursor: none;
+
+}
+
+.cursor {
+
+    position: fixed;
+    top: -30px;
+    left: -30px;
+}
+
+.circle {
+
+    transform: scale(0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+header {
+    width: 100%;
+    /*    outline: 1px dashed blue;*/
+    position: fixed;
+    top: 50%;
+}
+
+/*태민*/
+.main_tit {
+    position: absolute;
+    left: 6vw;
+    letter-spacing: 8px;
+    font-size: 1vw;
+    font-family: monr;
+    font-weight: bold;
+}
+
+/*sns*/
+.sns {
+    position: absolute;
+    left: 13vw;
+    top: 40vh;
+}
+
+.sns img {
+    width: 1vw;
+}
+
+.sns > ul > li {
+    margin-bottom: 1.5vh;
+    position: relative;
+}
+
+/*하늘동그라미셋팅*/
+.sns > ul > li::before {
+    position: absolute;
+    top: 50%;
+    left: -1vw;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    background-color: rgba(153, 212, 239, 0.49);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transition: all .5s ease-in;
+}
+
+/*sns호버시*/
+.sns > ul > li:hover::before {
+    opacity: 1;
+}
+
+/*햄버거메뉴*/
+.hamburger {
+    width: 27px;
+    height: 21px;
+    position: absolute;
+    right: 3vw;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    left: 0;
+    transition: left .5s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/*햄버거버튼 호버시 가운데바 왼쪽으로 밀리기*/
+.hamburger:hover span:nth-child(2) {
+    left: -6px;
+}
+
+.wrap {
+    outline: 1px dashed red;
+    width: 70%;
+
+    margin: 0 auto;
+}
+
+.topban {
+    margin-bottom: 1vh;
+}
+
+.topban ul {
+    width: 100%;
+    height: 78vh;
+    position: relative;
+}
+
+.topban ul li {
+    position: absolute;
+    width: 100%;
+    height: 78vh;
+    opacity: 0;
+}
+
+.topban ul li.on {
+    opacity: 1;
+    z-index: 1;
+}
+
+.topban ul li:nth-child(1) {
+    background: url(../images/ban1.jpg)no-repeat;
+    background-size: cover;
+    z-index: 50;
+    background-position: center;
+}
+
+.topban ul li:nth-child(2) {
+    background: url(../images/ban2.jpg)no-repeat;
+    background-size: cover;
+    z-index: 40;
+    background-position: center;
+}
+
+.topban ul li:nth-child(3) {
+    background: url(../images/ban3.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 30;
+}
+
+.topban ul li:nth-child(4) {
+    background: url(../images/ban4.jpg)no-repeat;
+    background-size: cover;
+    z-index: 20;
+}
+
+.topban ul li:nth-child(5) {
+    background: url(../images/ban5.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+/*프로필영역********************/
+
+
+/*프로필사진*/
+.ff {
+    margin: 10% 0;
+    /*    outline: 1px dashed blue;*/
+    width: 100%;
+    position: relative;
+}
+
+/*공통제목*/
+h1 {
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    font-family: mont;
+    font-weight: 100;
+    z-index: 9;
+    letter-spacing: 10px;
+}
+
+/*프로필큰제목*/
+.ff .txt {
+    position: absolute;
+}
+
+.ff > ul {
+    /*    outline: 1px dashed blue;*/
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ff > ul > li {
+
+    height: 100%;
+}
+
+.ff > ul > li:first-child {
+    width: 418px;
+
+}
+
+/*프로필박스******************/
+
+
+.ff > ul > li:last-child {
+    /*    outline: 1px dashed red;*/
+    width: calc(100% - 418px);
+    padding: 0 0 0 17vw;
+}
+
+
+/*큰글씨 이태민*/
+.ff ul h2 {
+    font-size: 2vw;
+    font-family: gongb;
+    font-weight: 100;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1.5vh;
+}
+
+/*작은글씨태민*/
+.ff ul h2 span {
+
+    font-family: gongl;
+    font-size: 1vw;
+}
+
+
+/*아래글씨들박스(왼쪽)*/
+.fftit {
+    float: left;
+    padding-top: 5vh;
+    /*    background-color: #ddd;*/
+    font-size: 1vw;
+    font-family: gongl;
+}
+
+.fftit li {
+    margin-bottom: 2vh;
+}
+
+.fftit span {
+    /*    margin-left: 5vw;*/
+    text-align: left;
+}
+
+.ffright {
+    float: right;
+}
+
+.ffright li:last-child {
+    line-height: 2;
+}
+
+/*갤러리영역*********************************/
+.ibx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+
+}
+
+.txt2 {
+    position: relative;
+    top: 9vh;
+    font-size: 10vw;
+}
+
+/*공통박스셋팅*/
+.gbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+
+
+
+.goh {
+    outline: 1px dashed blue;
+    overflow: hidden;
+
+
+}
+
+.goh li {
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+}
+
+.goh:hover > li {
+    transform: scale(1.3, 1.3);
+    transition: all 1.5s ease-in-out;
+
+}
+
+/*첫번째박스*/
+.gg1 > li {
+    width: 33vw;
+    height: 90vh;
+    background: url(../images/g1.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg2 > li {
+    width: 35vw;
+    height: 90vh;
+    background: url(../images/g2.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*두번째박스*/
+.gbox2 > ul {
+    margin-right: 1vw;
+}
+
+.gbox2 > ul:last-child {
+    margin-right: 0;
+}
+
+.gg3 > li {
+    width: 25vw;
+    height: 83vh;
+    background: url(../images/g3.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg4 > li {
+    width: 21vw;
+    height:83vh;
+    background: url(../images/g4.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg5 > li {
+    margin-right: 0;
+    width: 21.5vw;
+    height: 83vh;
+    background: url(../images/g5.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*세번째박스*/
+.gg6 > li {
+    width: 38vw;
+    height: 83vh;
+    background: url(../images/g6.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg7 > li {
+    width: 31vw;
+    height: 83vh;
+    background: url(../images/g7.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*네번째박스*/
+.gbox4 {
+    position: relative;
+}
+
+.gg8 > li {
+    width: 26vw;
+    height: 83vh;
+    background: url(../images/g8.jpg)no-repeat;
+    background-size: cover;
+}
+.gg9{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.gg9 > li {
+    width: 42vw;
+    height: 28vh;
+    background: url(../images/g9.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg10 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.gg10 > li {
+    width: 42vw;
+    height: 54vh;
+
+    background: url(../images/g10.jpg)no-repeat;
+    background-size: cover;
+
+}
+
+
+/*다섯번째박스*/
+
+.gg11 > li {
+    width: 33vw;
+    height: 83vh;
+    background: url(../images/g11.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg12 > li {
+    width: 35vw;
+    height: 83vh;
+    background: url(../images/g12.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/*여섯번째박스*/
+.gg13 > li {
+    width: 24vw;
+    height: 83vh;
+    background: url(../images/g13.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg14 > li {
+    width: 21vw;
+    height: 83vh;
+    background: url(../images/g14.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.gg15 > li {
+    width: 23vw;
+    height: 83vh;
+    background: url(../images/g15.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+
+
+/*일곱번째박스*/
+.gg16 > li {
+    width: 33vw;
+    height: 83vh;
+    background: url(../images/g16.jpg)no-repeat;
+    background-size: cover;
+}
+
+.gg17 > li {
+    width: 35vw;
+    height: 83vh;
+    background: url(../images/g17.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/*여덟번째박스*/
+.gg18 > li {
+    width: 20vw;
+    height: 83vh;
+    background: url(../images/g18.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gg19 > li {
+    width: 32vw;
+    height: 83vh;
+    background: url(../images/g18.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gg20 > li {
+    width: 16vw;
+    height: 83vh;
+    background: url(../images/g18.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*더보기 버튼*/
+.pbtn {
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 4vw;
+    height: 7vh;
+    line-height: 7vh;
+    text-align: center;
+    margin: 0 auto;
+    font-size: .59vw;
+}
+
+.pbtn:hover img {
+    animation: rotatBtn .5s 1 normal linear;
+}
+
+
+.pbtn img {
+    width: .5vw;
+    margin-left: 7%;
+}
+
+@keyframes rotatBtn {
+    from {
+        left: 0;
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+
+/*앨범영역*************************************/
+.album_box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20vh;
+}
+
+.zip {
+    width: 100%;
+    /*    background-color: #ddd;*/
+    margin-top: 25vh;
+}
+
+/*앨범번호 공통*/
+.zip h2 {
+    position: absolute;
+    font-family: 'mont';
+    font-weight: 100;
+    font-size: 4vw;
+    top: -7.5vh;
+    left: 0vw;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    color: #fff;
+}
+
+
+
+.album span {
+    position: absolute;
+    writing-mode: vertical-lr;
+    left: 30vw;
+}
+
+.album_song {
+    padding-left: 10vw;
+}
+
+.album_song h3 {
+    font-size: 3vw;
+    font-family: 'gongb';
+    margin-bottom: 5vh;
+}
+
+.album_song ul li {
+    font-size: 1.3vw;
+    line-height: 2;
+    font-family: 'gongl';
+}
+
+/*앨범자켓사진 공통*/
+.album {
+    /* outline: 1px dashed blue;*/
+    width: 57vh;
+    height: 57vh;
+}
+
+/*앨범집*/
+.album {
+    font-size: 1vw;
+    font-family: gongl;
+}
+
+.album b {
+    font-weight: 100;
+    position: absolute;
+    top: -2vh;
+    left: 5.5vw;
+}
+
+/*뮤비영역*************/
+.mv {
+    background-color: #ddd;
+    width: 100%;
+    height: 65vh;
+    transition: all .9s ease;
+}
+
+/*뮤비보기 버튼*/
+.vbtn {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'gongb';
+    font-size: .5vw;
+    letter-spacing: 3px;
+    opacity: 0;
+
+}
+
+.mv:hover {
+    filter: grayscale(5);
+
+}
+
+.mv:hover .vbtn {
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+/*팝업셋팅***********/
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+/*모달창 닫기버튼*/
+#modal span {
+    color: white;
+    position: absolute;
+    z-index: 99;
+    right: 20vw;
+    top: 4vh;
+    font-size: 7em;
+    cursor: pointer;
+}
+
+#modal span:hover {
+    animation: modalBtn .5s linear;
+}
+
+@keyframes modalBtn {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+/* 비디오사이즈 */
+#vidSizer {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vh;
+    max-width: 95%;
+
+}
+
+#vidHolder {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+#mainVid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+}
+
+/*첫번째 앨범*********/
+.album1 {
+    position: relative;
+}
+
+
+.a1 {
+    background: url(../images/a6.jpg)no-repeat;
+    background-size: cover;
+
+}
+
+/*첫번째 뮤비*************/
+.m1 {
+    background: url(../images/m1.jpg)no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*두번째 앨범**************/
+.a2 {
+    background: url(../images/a5.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*두번째 뮤비*************/
+.m2 {
+    background: url(../images/m2.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*세번째 앨범**************/
+.a3 {
+    background: url(../images/a4.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*세번째 뮤비*************/
+.m3 {
+    background: url(../images/m3.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*네번째 앨범**************/
+.a4 {
+    background: url(../images/a3.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*네번째 뮤비*************/
+.m4 {
+    background: url(../images/m4.jpg)no-repeat;
+    background-size: cover;
+}
+
+/*다섯번째 앨범**************/
+.a5 {
+    background: url(../images/a2.jpg)no-repeat;
+    background-size: cover;
+
+}
+
+/*다섯번째 뮤비*************/
+.m5 {
+    background: url(../images/m5.jpg)no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*여섯번째 앨범**************/
+.a6 {
+    background: url(../images/a1.jpg)no-repeat;
+    background-size: cover;
+
+}
+
+/*여섯번째 뮤비*************/
+.m6 {
+    background: url(../images/m6.jpg)no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
