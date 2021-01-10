@@ -117,7 +117,7 @@ header {
 /*햄버거 버튼 클릭시 메뉴창 셋팅*/
 .menu_wrap {
     position: fixed;
-    width: 70%;
+    width: 70vw;
     height: 100%;
     left: 140%;
     transform: translateX(-50%);
@@ -262,7 +262,7 @@ transition: all .8s ease-in-out;
 
 .wrap {
     outline: 1px dashed red;
-    width: 70%;
+    width: 70vw;
     margin: 0 auto;
 }
 
