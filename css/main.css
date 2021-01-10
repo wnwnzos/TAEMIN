@@ -106,7 +106,6 @@ li {
 }
 
 
-
 header {
     width: 100%;
     /*    outline: 1px dashed blue;*/
@@ -202,7 +201,6 @@ header {
 .wrap {
     outline: 1px dashed red;
     width: 70%;
-overflow: hidden;
     margin: 0 auto;
 }
 
