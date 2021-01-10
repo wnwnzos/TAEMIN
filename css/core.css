@@ -11,9 +11,13 @@ body {
     font-size: 15px;
     /*글자기본크기 16px을 변경함*/
     color: #333;
-
+overflow-y: auto;
    
 }
+body.bodyoh{
+    overflow-y: hidden;
+}
+
 
 
 /*IR(Image Replacement)-이미지설명요소 등 안보이게 처리*/

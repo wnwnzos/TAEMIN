@@ -136,9 +136,25 @@ transition: all .8s ease-in-out;
     background-color: transparent;
     border-bottom: 1px solid #333;
     font-size: 1vw;
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
 }
-
+/*검색상자 클릭시 input상자 border없애기*/
+.mlist input[type=text]:focus{
+    outline: none;
+    
+}
+/*검색상자 클릭시 search글자 없애기*/
+.mlist input[type=text]:focus::placeholder{
+    color: transparent;
+}
+/*돋보기 아이콘*/
+.mlist a{
+    display: inline;
+}
+.mlist img{
+    width: .8vw;
+}
+/*메뉴리스트들*/
 .mlist {
     position: absolute;
     bottom: 5vh;
@@ -240,6 +256,7 @@ transition: all .8s ease-in-out;
 }
 .open{
     top: -9px;
+    right: 3.7vw;
 }
 .hamburger.open span:nth-child(1) {
     top: 18px;

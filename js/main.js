@@ -91,6 +91,7 @@ new WOW().init();
 
         $(this).toggleClass("open");
         $(".menu_wrap").toggleClass("menu_open");
+        $("body").toggleClass("bodyoh");
     });
     
     
