@@ -111,6 +111,46 @@ header {
     /*    outline: 1px dashed blue;*/
     position: fixed;
     top: 50%;
+    z-index: 999;
+}
+
+/*햄버거 버튼 클릭시 메뉴창 셋팅*/
+.menu_wrap {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    left: 140%;
+    transform: translateX(-50%);
+    background-color: #ddd;
+    z-index: 99;
+    transition: all .5s ease-in-out;
+}
+.menu_wrap.menu_open{
+    left: 50%;
+transition: all .8s ease-in-out;
+}
+
+.mlist input {
+    border: 0;
+    width: 10vw;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    font-size: 1vw;
+    margin-bottom: 1vh;
+}
+
+.mlist {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+.mlist > ul > li {
+    font-size: 2vw;
+    font-family: monr;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 5px;
 }
 
 /*태민*/
@@ -178,7 +218,8 @@ header {
     width: 100%;
     background: #333;
     left: 0;
-    transition: left .5s ease;
+    transition: .25s ease-in-out;
+    transform: rotate(0deg);
 }
 
 .hamburger span:nth-child(1) {
@@ -197,6 +238,27 @@ header {
 .hamburger:hover span:nth-child(2) {
     left: -6px;
 }
+.open{
+    top: -9px;
+}
+.hamburger.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(139deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-139deg);
+}
+
+
+
+
 
 .wrap {
     outline: 1px dashed red;
@@ -237,7 +299,7 @@ header {
     background: url(../images/ban2.jpg)no-repeat;
     background-size: cover;
     z-index: 40;
-    background-position: center;
+
 }
 
 .topban ul li:nth-child(3) {
@@ -251,6 +313,7 @@ header {
     background: url(../images/ban4.jpg)no-repeat;
     background-size: cover;
     z-index: 20;
+    background-position: center;
 }
 
 .topban ul li:nth-child(5) {
@@ -437,7 +500,7 @@ h1 {
 
 .gg4 > li {
     width: 21vw;
-    height:83vh;
+    height: 83vh;
     background: url(../images/g4.jpg)no-repeat;
     background-size: cover;
 }
@@ -476,11 +539,13 @@ h1 {
     background: url(../images/g8.jpg)no-repeat;
     background-size: cover;
 }
-.gg9{
+
+.gg9 {
     position: absolute;
     right: 0;
     top: 0;
 }
+
 .gg9 > li {
     width: 42vw;
     height: 28vh;

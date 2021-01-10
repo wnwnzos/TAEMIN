@@ -86,6 +86,13 @@ new WOW().init();
 
 
     
+    /*햄버거버튼 클릭시*/
+    $(".hamburger").click(function(){
+
+        $(this).toggleClass("open");
+        $(".menu_wrap").toggleClass("menu_open");
+    });
+    
     
     
     
@@ -140,6 +147,15 @@ new WOW().init();
         $("body").css({
             overflowY:"auto"
         });
+        $("#mainVid").attr("src", "")
+    });
+    /*모달창외 바깥클릭시 모달창 닫기*/
+   $("#modal").click(function(){
+        $("#modal").fadeOut(500);
+        $("body").css({
+            overflowY:"auto"
+        });
+        $("#mainVid").attr("src", "")
     });
    
     
