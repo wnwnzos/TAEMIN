@@ -1,17 +1,17 @@
 $(function () { // jQB //////////////////////////////
-//    console.log("로딩완료!");
-    
-       
-    
-new WOW().init();
-    
+    //    console.log("로딩완료!");
 
 
-    
-         
-    
-    
-    
+
+    new WOW().init();
+
+
+
+
+
+
+
+
 
     /*마우스효과**********************************/
     function lerp(a, b, n) {
@@ -85,18 +85,65 @@ new WOW().init();
     cursor.init();
 
 
-    
+
     /*햄버거버튼 클릭시*/
-    $(".hamburger").click(function(){
+    $(".hamburger").click(function () {
 
         $(this).toggleClass("open");
         $(".menu_wrap").toggleClass("menu_open");
         $("body").toggleClass("bodyoh");
+        $(".tbtn").toggleClass("hide")
     });
-    
-    
-    
-    
+
+    /*메뉴li호버시 왼쪽영역 배경 썸네일 바뀌게***********/
+    var bgi = [
+        "images/menu1.jpg",
+        "images/menu2.jpg",
+        "images/menu3.jpg",
+        "images/menu4.gif"
+    ];
+
+    ///////////// each ///////////////
+    $(".menu_img> ul> li").each(function (idx, ele) {
+        $(ele).css({
+            background: "url(" + bgi[idx] + ") no-repeat",
+            backgroundSize: "cover",
+//            backgroundPosition: "center",
+            
+
+        });
+    }); ///////////// each ///////////////
+
+
+
+    //// mouseenter ///////////////////////////////////////////////
+    $(".mlist > ul > li").mouseenter(function () {
+        //li호버시 li왼쪽으로 밀기
+        $(this).stop().animate({
+            right: "10%",
+        }, 500);
+
+        // li호버시 해당 썸네일 보이기
+        var idx = $(this).index();
+
+        $(".menu_img> ul> li").eq(idx).addClass("on").siblings().removeClass("on");
+
+
+    }); //// mouseenter ///////////////////////////////////////////////
+
+
+    //// mouseeleave ///////////////////////////////////////////////
+    $(".mlist ul li").mouseleave(function () {
+        
+
+        $(this).stop().animate({
+            right: "0"
+        }, 500);
+    }); //// mouseeleave ///////////////////////////////////////////////
+
+
+
+
 
     /*상단배너*************************************/
 
@@ -119,66 +166,66 @@ new WOW().init();
 
     }, 5000);
 
-    
-    
-/*갤러리영역***********************************/    
+
+
+    /*갤러리영역***********************************/
     $(".hide").hide();
     /*더보기버튼 클릭시 보이기*/
-    $(".pbtn").click(function(e){
+    $(".pbtn").click(function (e) {
         e.preventDefault();
         $(this).hide();
         $(".hide").show(500);
     });
-    
-    
-    
-    
 
- /*뮤비 버튼 클릭시 모달창 보이기******************/
-    $(".vbtn").click(function(){
+
+
+
+
+    /*뮤비 버튼 클릭시 모달창 보이기******************/
+    $(".vbtn").click(function () {
         $("#modal").fadeIn(500);
         $("body").css({
-            overflowY:"hidden"
+            overflowY: "hidden"
         });
     });
-   
- /*닫기 클릭시 모달창 닫기******************/
-    $("#modal span").click(function(){
+
+    /*닫기 클릭시 모달창 닫기******************/
+    $("#modal span").click(function () {
         $("#modal").fadeOut(500);
         $("body").css({
-            overflowY:"auto"
+            overflowY: "auto"
         });
         $("#mainVid").attr("src", "")
     });
     /*모달창외 바깥클릭시 모달창 닫기*/
-   $("#modal").click(function(){
+    $("#modal").click(function () {
         $("#modal").fadeOut(500);
         $("body").css({
-            overflowY:"auto"
+            overflowY: "auto"
         });
         $("#mainVid").attr("src", "")
     });
-   
-    
-    
-    /*탑버튼 스크롤 내릴시 보여지기*/
-     $(window).scroll(function() {
-            if ($(this).scrollTop() > 500) {
-                $('.tbtn').fadeIn();
-            } else {
-                $('.tbtn').fadeOut();
-            }
-        });
-    
 
-    
+
+
+    /*탑버튼 스크롤 내릴시 보여지기*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('.tbtn').fadeIn();
+        } else {
+            $('.tbtn').fadeOut();
+        }
+    });
+
+
+
     /*탑버튼 클릭시 상단으로!*/
-  $(".tbtn").click(function() {
-            $('html, body').animate({
-                scrollTop : 0
-            }, 400);
-            return false;
-        });
+    $(".tbtn").click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
 
 
 
