@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAEMIN</title>
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
     <!--제이쿼리라이브러리-->
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -50,10 +52,10 @@
                 <label for="">
                     <input type="text" placeholder="Search ..."> </label><a href="#"><img src="images/search.svg" alt="검색하기"></a>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">FROFILE</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">ALBUM</a></li>
+                    <li><a href="#topban">HOME</a></li>
+                    <li><a href="#ff">FROFILE</a></li>
+                    <li><a href="#gwrap">GALLERY</a></li>
+                    <li><a href=".#album_wrap">ALBUM</a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +66,7 @@
     </div>
     <div class="wrap">
         <!--상단배너-->
-        <div class="topban">
+        <div class="topban" id="topban">
             <ul>
                 <li class="on"></li>
                 <li></li>
@@ -75,7 +77,7 @@
         </div>
 
         <!--프로필영역-->
-        <div class="ff">
+        <div class="ff" id="ff">
             <h1 class="txt wow bounceInLeft">FROFILE</h1>
             <ul>
                 <!--사진-->
@@ -114,7 +116,7 @@
         </div>
 
         <!--갤러리영역-->
-        <div class="gwrap">
+        <div class="gwrap" id="gwrap">
             <h1 class="txt2 wow fadeInDown">GALLERY</h1>
             <div class="gbox">
                 <ul class="goh gg1">
@@ -207,7 +209,7 @@
         </div>
 
         <!--앨범영역-->
-        <div class="album_wrap">
+        <div class="album_wrap" id="album_wrap">
             <h1 class="txt2 wow fadeInDown" data-wow-duration="1s">ALBUM</h1>
             <div class="zip album1">
                 <h2>01</h2>

@@ -86,7 +86,7 @@ $(function () { // jQB //////////////////////////////
 
 
 
-    /*햄버거버튼 클릭시*/
+    /*햄버거버튼 클릭시**********************/
     $(".hamburger").click(function () {
 
         $(this).toggleClass("open");
@@ -108,8 +108,8 @@ $(function () { // jQB //////////////////////////////
         $(ele).css({
             background: "url(" + bgi[idx] + ") no-repeat",
             backgroundSize: "cover",
-//            backgroundPosition: "center",
-            
+                        backgroundPosition: "center",
+
 
         });
     }); ///////////// each ///////////////
@@ -134,13 +134,22 @@ $(function () { // jQB //////////////////////////////
 
     //// mouseeleave ///////////////////////////////////////////////
     $(".mlist ul li").mouseleave(function () {
-        
+
 
         $(this).stop().animate({
             right: "0"
         }, 500);
     }); //// mouseeleave ///////////////////////////////////////////////
 
+
+
+    /*메뉴창안에 메뉴들 클릭시***************/
+    $(".mlist > ul > li").click(function () {
+        $("body").removeClass("bodyoh");
+        $(".menu_wrap").removeClass("menu_open");
+        $(".hamburger").removeClass("open");
+        $(".tbtn").removeClass("hide");
+    });
 
 
 
