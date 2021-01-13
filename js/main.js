@@ -108,7 +108,7 @@ $(function () { // jQB //////////////////////////////
         $(ele).css({
             background: "url(" + bgi[idx] + ") no-repeat",
             backgroundSize: "cover",
-                        backgroundPosition: "center",
+//            backgroundPosition: "center",
 
 
         });

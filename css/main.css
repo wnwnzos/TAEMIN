@@ -156,6 +156,7 @@ header {
     right: 0;
     opacity: 0;
     transition: opacity .9s ease-out;
+    background-position: center;
 }
 
 .menu_img > ul > li.on {

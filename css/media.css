@@ -448,6 +448,13 @@
     .menu_wrap {
         width: 100%;
     }
+    .menu_img{
+        width: 70vw;
+    }
+    
+    .mlist {
+    right: 2vw;
+}
 
     .mlist input {
         width: 22vw;
@@ -601,4 +608,181 @@
 
 
 /*모바일-아이폰X*/
-@media only screen and (max-width:480px) {}
+@media only screen and (max-width:480px) {
+    header{
+        height: 11vw;
+    }
+    
+    .main_tit {
+    font-size: 4vw;
+}
+    
+    /*sns*/
+    .sns img {
+    width: 4vw;
+}
+    
+    /*햄버거메뉴*/
+    .hamburger {
+    width: 23px;
+    height: 12px;
+}
+    .hamburger span{
+        height: 2px;
+    }
+    .hamburger span:nth-child(2) {
+    top: 5px;
+}
+    .hamburger span:nth-child(3) {
+    top: 10px;
+}
+    .topban{
+        margin-bottom: 20vh;
+    }
+    
+    .topban ul {
+    height: 30vh;
+}
+    .topban ul li{
+        height: 40vh;
+    }
+    
+    
+    /*탑버튼************/
+    .tbtn {
+    width: 9.5vw;
+    height: 9.5vw;
+    line-height: 9.5vw;
+    font-size: 3vw;
+        bottom: 42vh;
+}
+    
+    
+    /*프로필영역********************/
+    .ff> ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .ff> ul >li img{
+        display: none;
+    }
+    
+    .ff > ul > li:first-child {
+    /* width: 418px; */
+    width: 100%;
+    height: 46vh;
+    background: url(../images/ff.png)no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+    
+    .ff > ul > li:last-child{
+        position: static;
+    }
+    h1{
+        font-size: 15vw;
+    }
+    .ff .txt {
+    top: -12vw;
+}
+    
+    .ff > ul > li:last-child {
+    width: 90%;
+        margin: 5vh auto 0 auto;
+}
+    
+    .ff ul h2 {
+    font-size: 5vw;
+}
+    
+    .fftit {
+    font-size: 3.5vw;
+}
+    
+    
+    /*갤러리영역*******/
+    .txt2 {
+    top: 3vh;
+        font-size: 16vw;
+}
+    .gbox{
+        margin-bottom: 1vh;
+    }
+    .goh {
+    height: 32vh;
+}
+    
+    /*더보기버튼*/
+    .pbtn{
+        width: 14vw;
+        height: 6vh;
+        line-height: 6vh;
+    }
+    .pbtn img{
+        width: 2vw;
+    }
+    
+    /*앨범영역******************/
+    .txt2{
+        top:3vh;
+    }
+    
+    .zip h2 {
+    font-size: 9vw;
+        top: -4.3vh;
+}
+    .album b {
+    top: -1.8vh;
+        left: 12.5vw;
+    font-size: 3.5vw;
+}
+    .album span {
+    left: 93vw;
+}
+    
+    .album_box {
+     margin-bottom: 0; 
+}
+    
+    .album_song h3 {
+    font-size: 10vw;
+}
+    
+    .album_song {
+    padding: 10vw 0 10vw 0;
+}
+    .album_song > ul > li {
+    font-size: 3.9vw;
+}
+    
+    .pbtn{
+        margin-bottom: 0;
+    }
+    
+    /*뮤비보기버튼*/
+    .vbtn {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*앨범영역************/
+    .album {
+    width: 42vh;
+    height: 42vh;
+}
+    
+    
+    
+    
+}
