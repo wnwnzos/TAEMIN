@@ -636,6 +636,34 @@
     .hamburger span:nth-child(3) {
     top: 10px;
 }
+    /*닫기버튼위치조정*/
+    .hamburger.open span:nth-child(1), .hamburger.open span:nth-child(3) {
+    top: 5px;
+}
+    
+    /*메뉴창*/
+    .menu_wrap{
+        background-color: transparent;
+    }
+    .menu_img {
+    width: 100%;
+}
+    .mlist {
+    z-index: 1;
+    right: 3vw;
+    top: 6vh;
+    text-align: right;
+}
+    
+    .mlist label, .mlist>.searchIcon{
+        display: none;
+    }
+    .mlist > ul > li {
+    font-size: 6vw;
+}
+    
+    
+    
     .topban{
         margin-bottom: 20vh;
     }
@@ -757,6 +785,7 @@
     
     .pbtn{
         margin-bottom: 0;
+        font-size: 2.5vw;
     }
     
     /*뮤비보기버튼*/
@@ -764,6 +793,7 @@
     width: 80px;
     height: 80px;
     line-height: 80px;
+    font-size: 3vw;
 }
     
     

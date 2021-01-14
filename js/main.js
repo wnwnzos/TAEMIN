@@ -236,6 +236,34 @@ $(function () { // jQB //////////////////////////////
         return false;
     });
 
+    
+    // 모바일일때(화면375이하)
+    if ($(window).width() <= 375) {
+        
+        $(".menu_img> ul> li").each(function (idx, ele) {
+        $(ele).css({
+            backgroundPosition: "center",
+
+
+        });
+    }); ///////////// each ///////////////
+
+
+$(".mlist > ul > li").mouseenter(function () {
+        //li호버시 li왼쪽으로 밀기 없애기
+        $(this).stop().animate({
+            right: "0",
+        }, 500);
+
+        // li호버시 해당 썸네일 보이기 없애기
+        $(".menu_img> ul> li").eq(0).addClass("on").siblings().removeClass("on");
+
+
+    }); //// mouseenter ///////////////////////////////////////////////
+
+
+
+    }
 
 
 
