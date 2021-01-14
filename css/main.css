@@ -305,7 +305,7 @@ header {
 
 .open {
     top: -9px;
-    right: 3.7vw;
+    right: 3vw;
 }
 
 .hamburger.open span:nth-child(1) {

@@ -651,7 +651,7 @@
     .mlist {
     z-index: 1;
     right: 3vw;
-    top: 6vh;
+    top: 8vh;
     text-align: right;
 }
     
@@ -665,14 +665,14 @@
     
     
     .topban{
-        margin-bottom: 20vh;
+        margin-bottom: 64vh;
     }
     
     .topban ul {
     height: 30vh;
 }
     .topban ul li{
-        height: 40vh;
+        height: 72vh;
     }
     
     
@@ -751,8 +751,10 @@
     }
     
     /*앨범영역******************/
-    .txt2{
-        top:3vh;
+    
+    
+    .txt3{
+        top: 13vh;
     }
     
     .zip h2 {
