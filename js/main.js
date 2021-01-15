@@ -1,7 +1,7 @@
 $(function () { // jQB //////////////////////////////
     //    console.log("로딩완료!");
 
-     new WOW().init();
+    new WOW().init();
 
 
 
@@ -211,6 +211,8 @@ $(function () { // jQB //////////////////////////////
 
 
     /*탑버튼 스크롤 내릴시 보여지기*/
+    $(".tbtn").hide();
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 500) {
             $('.tbtn').fadeIn();
@@ -230,7 +232,7 @@ $(function () { // jQB //////////////////////////////
     });
 
 
-    // 모바일일때(화면375이하)
+    // 모바일일때(화면375이하) /////////////////////////////////////////////////
     if ($(window).width() <= 375) {
 
         $(".menu_img> ul> li").each(function (idx, ele) {
@@ -257,8 +259,39 @@ $(function () { // jQB //////////////////////////////
 
 
 
+        $(window).scroll(function () {
 
-    }
+            var scrolltop = $(document).scrollTop();
+//            console.log("스크롤위치"+scrolltop);
+            
+            var height = $(document).height();
+//            console.log("보여지는창높이"+height);
+            
+            var height_win = $(window).height();
+//            console.log("html의문서높이"+height_win);
+
+
+            //  (스크롤을 맨 밑으로 내렸을 때의 스크롤 길이 값)   == (문서의 길이) - (창의 길이)
+            if (Math.round($(window).scrollTop()) == $(document).height() - $(window).height()) {
+                console.log("맨아래맞음?");
+                
+                $(".tbtn").addClass("on")
+                $(".tbtn>a").addClass("on")
+            } else {
+                $(".tbtn").removeClass("on")
+                $(".tbtn>a").removeClass("on")
+            }
+
+        });
+
+
+
+
+
+
+
+
+    } //////////////////모바일일때 //////////////////////////////////
 
 
 

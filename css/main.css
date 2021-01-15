@@ -66,9 +66,14 @@ li {
     border-radius: 50%;
     text-align: center;
     animation: tbtnAni 1.5s ease-in infinite;
-    display: none;
     opacity: 1;
     transition: all 1s ease-in-out;
+}
+.tbtn.on{
+    border-color: #fff;
+}
+.tbtn>a.on{
+    color: #fff;
 }
 
 .tbtn.hide {
