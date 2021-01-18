@@ -3,9 +3,6 @@ $(function () { // jQB //////////////////////////////
 
     new WOW().init();
 
-
-
-
     /*마우스효과**********************************/
     function lerp(a, b, n) {
         return (1 - n) * a + n * b
@@ -78,6 +75,14 @@ $(function () { // jQB //////////////////////////////
     cursor.init();
 
 
+    /*햄버거버튼 오버시 마우스모양커지기*/
+    $("a").hover(function () {
+        console.log("호버");
+        $(".cursor svg").addClass("bigC");
+    });
+
+
+
 
     /*햄버거버튼 클릭시**********************/
     $(".hamburger").click(function () {
@@ -126,7 +131,7 @@ $(function () { // jQB //////////////////////////////
 
 
     //// mouseeleave ///////////////////////////////////////////////
-    $(".mlist ul li").mouseleave(function () {
+    $(".mlist > ul > li").mouseleave(function () {
 
 
         $(this).stop().animate({
@@ -137,7 +142,7 @@ $(function () { // jQB //////////////////////////////
 
 
     /*메뉴창안에 메뉴들 클릭시***************/
-    $(".mlist > ul > li").click(function () {
+    $(".mlist > ul > li a").click(function () {
         $("body").removeClass("bodyoh");
         $(".menu_wrap").removeClass("menu_open");
         $(".hamburger").removeClass("open");
@@ -262,19 +267,19 @@ $(function () { // jQB //////////////////////////////
         $(window).scroll(function () {
 
             var scrolltop = $(document).scrollTop();
-//            console.log("스크롤위치"+scrolltop);
-            
+            //            console.log("스크롤위치"+scrolltop);
+
             var height = $(document).height();
-//            console.log("보여지는창높이"+height);
-            
+            //            console.log("보여지는창높이"+height);
+
             var height_win = $(window).height();
-//            console.log("html의문서높이"+height_win);
+            //            console.log("html의문서높이"+height_win);
 
 
             //  (스크롤을 맨 밑으로 내렸을 때의 스크롤 길이 값)   == (문서의 길이) - (창의 길이)
             if (Math.round($(window).scrollTop()) == $(document).height() - $(window).height()) {
                 console.log("맨아래맞음?");
-                
+
                 $(".tbtn").addClass("on")
                 $(".tbtn>a").addClass("on")
             } else {

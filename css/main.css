@@ -69,10 +69,12 @@ li {
     opacity: 1;
     transition: all 1s ease-in-out;
 }
-.tbtn.on{
+
+.tbtn.on {
     border-color: #fff;
 }
-.tbtn>a.on{
+
+.tbtn > a.on {
     color: #fff;
 }
 
@@ -106,16 +108,19 @@ li {
 }
 
 .cursor {
-
     position: fixed;
     top: -30px;
     left: -30px;
 }
 
 .circle {
-
     transform: scale(0.8);
     transition: all 0.2s ease-in-out;
+}
+
+.bigC {
+    transform: scale(2);
+    transition: scale 0.2s ease-in-out;
 }
 
 
@@ -136,7 +141,7 @@ header {
     height: 100%;
     left: 150%;
     transform: translateX(-50%);
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(216, 216, 216);
     z-index: 99;
     transition: all .5s ease-in-out;
 }
@@ -205,17 +210,19 @@ header {
     right: 3vw;
 }
 
-.mlist > ul > li {
+.mlist > ul > li{
     position: relative;
     font-size: 1.05vw;
     font-family: monr;
     font-weight: bold;
     line-height: 2.5;
     letter-spacing: 5px;
+    width: fit-content;
 }
 
+
 /*돋보기 아이콘*/
-.mlist a {
+.mlist .searchIcon {
     display: inline;
 }
 
@@ -817,7 +824,7 @@ h1 {
     margin-bottom: 5vh;
 }
 
-.album_song >ul >li {
+.album_song > ul > li {
     font-size: 1.3vw;
     line-height: 2;
     font-family: 'gongl';
