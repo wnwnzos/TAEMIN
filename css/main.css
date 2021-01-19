@@ -43,15 +43,6 @@
 
 
 
-a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-}
-
-li {
-    list-style: none;
-}
 
 
 /*탑버튼셋팅***********/
@@ -122,6 +113,8 @@ li {
     transform: scale(2);
     transition: scale 0.2s ease-in-out;
 }
+
+
 
 
 header {
